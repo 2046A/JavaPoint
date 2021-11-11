@@ -21,4 +21,12 @@ class GenericClassTest {
         long b = 12;
         assertEquals(a,b);
     }
+    @org.junit.jupiter.api.Test
+    void testWarpType(){
+        GenericClass<String> sgc = new GenericClass<>();
+        GenericClass<Long> lgc = new GenericClass<>();
+        assertEquals(sgc.getClass(), lgc.getClass());
+        System.out.println(sgc.getClass() == lgc.getClass());
+        System.out.println(sgc.getClass().getName());
+    }
 }
